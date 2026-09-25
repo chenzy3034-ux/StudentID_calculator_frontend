@@ -1,4 +1,4 @@
-# StudentID Calculator Frontend
+# 832401306 Calculator Frontend
 
 ## Project introduction
 
@@ -12,7 +12,7 @@ backend SQLite database.
 
 ## Public deployment
 
-- Frontend: `https://chenzy3034-ux.github.io/StudentID_calculator_frontend/`
+- Frontend: `https://chenzy3034-ux.github.io/832401306_calculator_frontend/`
 - Backend API: `https://chenzy.pythonanywhere.com`
 
 The frontend is deployed free of charge with GitHub Pages. The GitHub Actions
@@ -50,7 +50,7 @@ npm --version
 Run all commands in this repository's root directory:
 
 ```sh
-cd StudentID_calculator_frontend
+cd 832401306_calculator_frontend
 npm install
 ```
 
@@ -102,7 +102,7 @@ Start the backend first by following the backend repository README. Then, in a
 separate terminal, start this frontend:
 
 ```sh
-cd StudentID_calculator_frontend
+cd 832401306_calculator_frontend
 npm run dev
 ```
 
@@ -147,7 +147,7 @@ Pushes to `main` trigger the workflow and publish the site to GitHub Pages over
 HTTPS. If the backend address changes, update `VITE_API_BASE_URL` in the
 workflow, commit the change, and redeploy.
 
-The Vite production base path is `/StudentID_calculator_frontend/` because this
+The Vite production base path is `/832401306_calculator_frontend/` because this
 is a GitHub project site. A failed backend request is shown as an error in the
 calculator; the browser does not calculate a fallback result.
 
