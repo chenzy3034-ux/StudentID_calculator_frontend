@@ -55,7 +55,7 @@ export default function Calculator({
           inputMode="decimal"
           value={expression}
           onChange={(event) => onExpressionChange(event.target.value)}
-          placeholder="(1 + 2) × 3"
+          placeholder="0"
           autoComplete="off"
           spellCheck="false"
           aria-describedby="calculation-error"

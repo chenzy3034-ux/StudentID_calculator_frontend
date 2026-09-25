@@ -62,13 +62,6 @@ button {
   letter-spacing: -0.04em;
 }
 
-.app-introduction {
-  max-width: 690px;
-  margin: 14px 0 0;
-  color: #5e6b80;
-  line-height: 1.65;
-}
-
 .connection-note {
   display: flex;
   flex: 0 0 auto;

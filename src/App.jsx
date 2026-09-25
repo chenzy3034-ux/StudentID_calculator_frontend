@@ -102,10 +102,6 @@ export default function App() {
         <div>
           <p className="product-label">Front-end / Back-end Separation</p>
           <h1>Calculator System</h1>
-          <p className="app-introduction">
-            Build an expression here. FastAPI performs every calculation and saves
-            successful results to SQLite.
-          </p>
         </div>
         <div className="connection-note">
           <span aria-hidden="true" />
