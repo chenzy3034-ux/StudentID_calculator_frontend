@@ -10,6 +10,16 @@ The frontend does not calculate final results or store history locally. Pressing
 `=` sends the expression to the backend, and all history data comes from the
 backend SQLite database.
 
+## Public deployment
+
+- Frontend: `https://chenzy3034-ux.github.io/StudentID_calculator_frontend/`
+- Backend API: `https://chenzy.pythonanywhere.com`
+
+The frontend is deployed free of charge with GitHub Pages. The GitHub Actions
+workflow installs the locked npm dependencies, runs the production build, and
+publishes `dist/`. The production build uses the PythonAnywhere backend URL
+through `VITE_API_BASE_URL` and requires no payment information.
+
 ## Technology stack
 
 - React 19
@@ -124,6 +134,23 @@ When deploying the static files, set `VITE_API_BASE_URL` before running the
 build so the generated application points to the deployed backend. The value is
 embedded at build time.
 
+## GitHub Pages deployment
+
+The repository includes `.github/workflows/deploy.yml` with the production
+configuration:
+
+- build command: `npm ci && npm run build`
+- deployed artifact: `dist`
+- backend URL: `https://chenzy.pythonanywhere.com`
+
+Pushes to `main` trigger the workflow and publish the site to GitHub Pages over
+HTTPS. If the backend address changes, update `VITE_API_BASE_URL` in the
+workflow, commit the change, and redeploy.
+
+The Vite production base path is `/StudentID_calculator_frontend/` because this
+is a GitHub project site. A failed backend request is shown as an error in the
+calculator; the browser does not calculate a fallback result.
+
 ## Frontend/backend connection
 
 The frontend uses these backend endpoints:
@@ -161,6 +188,7 @@ has `success: true` and the payload in `data`; an error response has
 ├── index.html               # Vite HTML entry point
 ├── package.json             # Scripts and dependencies
 ├── package-lock.json        # Locked dependency versions
+├── .github/workflows/       # GitHub Pages deployment workflow
 └── vite.config.js           # Vite configuration
 ```
 
